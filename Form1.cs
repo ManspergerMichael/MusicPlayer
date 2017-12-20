@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.IO;
 namespace MusicPlayer
 {
     public partial class Form1 : Form
@@ -15,16 +15,28 @@ namespace MusicPlayer
         public Form1()
         {
             InitializeComponent();
+                      
         }
 
         private void browseButton_Click(object sender, EventArgs e)
         {
+            string songName = "";
+
+            //file diolog box is opened and user selects a file
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
+                //file path is displayed
                 textBox1.Text = openFileDialog1.FileName;
             }
-
+            //file is loaded into the WMP and played.
             Player.URL = textBox1.Text;
+
+            //extract album and artist name
+            songName = Path.GetFileName(textBox1.Text);
+            MessageBox.Show(songName);
+            //access wikipedia
+
+            //display text from article
         }
 
         private void playButton_Click(object sender, EventArgs e)
