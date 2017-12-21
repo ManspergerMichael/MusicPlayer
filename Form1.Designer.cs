@@ -37,6 +37,7 @@
             this.pauseButton = new System.Windows.Forms.Button();
             this.playButton = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.infoButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.Player)).BeginInit();
             this.SuspendLayout();
             // 
@@ -131,12 +132,27 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // infoButton
+            // 
+            this.infoButton.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.infoButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.infoButton.Font = new System.Drawing.Font("Onyx", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.infoButton.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.infoButton.Location = new System.Drawing.Point(373, 286);
+            this.infoButton.Name = "infoButton";
+            this.infoButton.Size = new System.Drawing.Size(148, 57);
+            this.infoButton.TabIndex = 7;
+            this.infoButton.Text = "Wikipidea";
+            this.infoButton.UseVisualStyleBackColor = false;
+            this.infoButton.Click += new System.EventHandler(this.infoButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(885, 276);
+            this.ClientSize = new System.Drawing.Size(885, 364);
+            this.Controls.Add(this.infoButton);
             this.Controls.Add(this.playButton);
             this.Controls.Add(this.pauseButton);
             this.Controls.Add(this.stopButton);
@@ -164,6 +180,7 @@
         private System.Windows.Forms.Button pauseButton;
         private System.Windows.Forms.Button playButton;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button infoButton;
     }
 }
 
